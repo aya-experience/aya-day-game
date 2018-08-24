@@ -13,6 +13,10 @@
   to { background: #FFB5C9; }
 }
 
+body {
+  color: black;
+}
+
 body.start {
   animation:
     color-switch 0s 1s,
