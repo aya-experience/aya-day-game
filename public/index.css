@@ -2,10 +2,25 @@
   from { width: 0; }
 }
 @keyframes deleting {
-  from { width: 12ch; }
   to { width: 0; }
 }
-@keyframes blink-caret { 50% { border-color: transparent; } }
+@keyframes disapear {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+@keyframes colors {
+  to {
+    background: linear-gradient(144.17deg, #FFB5C9 0%, #FFCBD9 100%);
+    color: white;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -18,19 +33,85 @@ body {
   padding: 50px;
 }
 
-h1 {
-	font: bold 300% Consolas, Monaco, monospace;
-	border-right: .1em solid black;
-	width: 12ch;
-	/* margin: 2em 1em; */
+body.start {
+  animation: colors .5s 1s;
+  animation-fill-mode: forwards;
+}
+
+h2 {
+  font: bold 300% Consolas, Monaco, monospace;
+	border-right: .1rem solid black;
 	white-space: nowrap;
 	overflow: hidden;
+}
+
+h2.step-1 {
+  width: 12ch;
 	animation:
     typing 2s steps(12, end),
     blink-caret .5s step-end infinite alternate;
 }
 
-h1.end {
-  animation: deleting 1s steps(12, end);
+h2.step-1.end {
+  animation:
+    deleting 1s steps(12, end),
+    disapear .2s 1s;
+  animation-fill-mode: forwards;
+}
+
+h2.step-2 {
+  position: relative;
+  top: -105px;
+  opacity: 0;
+}
+
+h2.step-2.start {
+  width: 21ch;
+  animation:
+    appear .2s 1s,
+    typing 1s 1s steps(21, end),
+    blink-caret .5s step-end infinite alternate,
+    deleting 1s 4s steps(21, end),
+    disapear .2s 5s;
+  animation-fill-mode: forwards;
+}
+
+h2.step-3 {
+  position: relative;
+  top: -210px;
+  opacity: 0;
+}
+
+h2.step-3.start {
+  width: 36ch;
+  animation:
+    appear .2s 5s,
+    typing 2s 5s steps(36, end),
+    blink-caret .5s step-end infinite alternate;
+  animation-fill-mode: forwards;
+}
+
+p {
+  display: none;
+  opacity: 0;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  font: bold 300% Consolas, Monaco, monospace;
+}
+
+p a {
+  color: black;
+}
+
+p.start {
+  display: flex;
+  animation: appear .5s 7s;
   animation-fill-mode: forwards;
 }
