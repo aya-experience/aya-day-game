@@ -21,10 +21,7 @@ body.start {
 }
 
 h2 {
-  font: bold 300% Consolas, Monaco, monospace;
-  border-right: .1rem solid black;
-  white-space: nowrap;
-  overflow: hidden;
+  font-size: 50px;
 }
 
 body.start h2 {
@@ -47,7 +44,7 @@ body.start h2.step-1 {
 
 h2.step-2 {
   position: relative;
-  top: -105px;
+  top: -100px;
   opacity: 0;
 }
 
@@ -64,7 +61,7 @@ body.start h2.step-2 {
 
 h2.step-3 {
   position: relative;
-  top: -210px;
+  top: -200px;
   opacity: 0;
 }
 
