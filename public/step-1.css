@@ -90,8 +90,3 @@ body.start h2.step-4 {
     blink-caret .5s step-end infinite alternate;
   animation-fill-mode: forwards;
 }
-
-a {
-  color: white;
-  text-decoration: none;
-}
