@@ -42,6 +42,10 @@ app.get("/e69b9e73", (req, res) => {
   res.render("step-4", req.session);
 });
 
+app.get("/sa87ui24", (req, res) => {
+  res.render("step-5", req.session);
+});
+
 app.get("/step-6.css", (req, res) => {
   res.set("Content-Type", "text/css");
   res.render("step-6-css", req.session);
