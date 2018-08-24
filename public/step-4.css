@@ -1,0 +1,44 @@
+:root {
+  --step-1-char: 42;
+  --step-2-char: 28;
+  --step-3-char: 10;
+}
+
+body {
+  background: linear-gradient(148.35deg, #C5BBE7 0%, #C8EFEC 100%);
+}
+
+h2 {
+  width: 67ch;
+  margin: 0;
+}
+
+pre {
+  margin: 0;
+}
+
+h2.step-0-1,
+h2.step-0-2,
+h2.step-0-3 {
+  margin: 10px 0;
+}
+
+h2.step-0-1 {
+  width: calc(var(--step-1-char) * 1ch);
+  animation:
+    typing calc(var(--step-1-char) * var(--time-char)) steps(var(--step-1-char), end),
+    blink-caret .5s step-end infinite alternate,
+    end-caret 0s 2.5s;
+  animation-fill-mode: forwards;
+}
+
+h2.step-0-2 {
+  opacity: 0;
+  width: calc(var(--step-2-char) * 1ch);
+  animation:
+    appear 0s 2.5s,
+    typing calc(var(--step-2-char) * var(--time-char)) 2.5s steps(var(--step-2-char), end),
+    blink-caret .5s step-end infinite alternate,
+    end-caret 0s 5s;
+  animation-fill-mode: forwards;
+}
