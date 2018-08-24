@@ -42,4 +42,13 @@ app.get("/e69b9e73", (req, res) => {
   res.render("step-4", req.session);
 });
 
+app.get("/step-6.css", (req, res) => {
+  res.set("Content-Type", "text/css");
+  res.render("step-6-css", req.session);
+});
+
+app.get("/03e463f8", (req, res) => {
+  res.render("step-6", req.session);
+});
+
 app.listen(1234);
