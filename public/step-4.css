@@ -2,6 +2,7 @@
   --step-1-char: 42;
   --step-2-char: 28;
   --step-3-char: 10;
+  --step-4-char: 67;
 }
 
 body {
@@ -42,3 +43,53 @@ h2.step-0-2 {
     end-caret 0s 5s;
   animation-fill-mode: forwards;
 }
+
+h2.step-0-3 {
+  opacity: 0;
+  width: calc(var(--step-3-char) * 1ch);
+  animation:
+    appear 0s 5s,
+    typing calc(var(--step-3-char) * var(--time-char)) 5s steps(var(--step-3-char), end),
+    blink-caret .5s step-end infinite alternate,
+    end-caret 0s 7s;
+  animation-fill-mode: forwards;
+}
+
+h2.step-1,
+h2.step-2,
+h2.step-3,
+h2.step-4,
+h2.step-5,
+h2.step-6,
+h2.step-7,
+h2.step-8,
+h2.step-9,
+h2.step-10,
+h2.step-11,
+h2.step-12,
+h2.step-13,
+h2.step-14 {
+  opacity: 0;
+  width: calc(var(--step-4-char) * 1ch);
+  animation:
+    appear 0s 7s,
+    typing  1s 7s steps(var(--step-1-char), end),
+    blink-caret .5s step-end infinite alternate,
+    end-caret 0s 8s;
+  animation-fill-mode: forwards;
+}
+
+h2.step-1 { animation-delay: 7s, 7s, 0s, 8s; }
+h2.step-2 { animation-delay: 8s, 8s, 0s, 9s; }
+h2.step-3 { animation-delay: 9s, 9s, 0s, 10s; }
+h2.step-4 { animation-delay: 10s, 10s, 0s, 11s; }
+h2.step-5 { animation-delay: 11s, 11s, 0s, 12s; }
+h2.step-6 { animation-delay: 12s, 12s, 0s, 13s; }
+h2.step-7 { animation-delay: 13s, 13s, 0s, 14s; }
+h2.step-8 { animation-delay: 14s, 14s, 0s, 15s; }
+h2.step-9 { animation-delay: 15s, 15s, 0s, 16s; }
+h2.step-10 { animation-delay: 16s, 16s, 0s, 17s; }
+h2.step-11 { animation-delay: 17s, 17s, 0s, 18s; }
+h2.step-12 { animation-delay: 18s, 18s, 0s, 19s; }
+h2.step-13 { animation-delay: 19s, 19s, 0s, 20s; }
+h2.step-14 { animation-delay: 20s, 20s, 0s, 21s; }
