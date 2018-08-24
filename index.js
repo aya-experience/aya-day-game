@@ -29,8 +29,17 @@ app.post("/aa5480bc", (req, res) => {
   res.redirect("/ea8c0a1e");
 });
 
+app.get("/step-3-2.css", (req, res) => {
+  res.set("Content-Type", "text/css");
+  res.render("step-3-2-css", req.session);
+});
+
 app.get("/ea8c0a1e", (req, res) => {
   res.render("step-3-2", req.session);
+});
+
+app.get("/e69b9e73", (req, res) => {
+  res.render("step-4", req.session);
 });
 
 app.listen(1234);
