@@ -22,6 +22,7 @@ body.start {
 
 h2 {
   font-size: 50px;
+  border-color: black;
 }
 
 body.start h2 {
