@@ -1,0 +1,45 @@
+:root {
+  --step-1-char: 31;
+  --step-2-char: 42;
+  --step-3-char: 33;
+}
+
+body {
+  background: linear-gradient(144.17deg, #A8D9EA 0%, #5BC6EB 100%);
+}
+
+h2.step-1 {
+  width: calc(var(--step-1-char) * 1ch);
+  animation:
+    typing calc(var(--step-1-char) * var(--time-char)) steps(var(--step-1-char), end),
+    blink-caret .5s step-end infinite alternate,
+    end-caret 0s 3s,
+    restore-caret .5s step-end 9.5s alternate,
+    deleting calc(var(--step-1-char) * var(--time-char)) 9.5s steps(var(--step-1-char), end),
+    disapear 0s 11.5s;
+  animation-fill-mode: forwards;
+}
+
+h2.step-2 {
+  opacity: 0;
+  width: calc(var(--step-2-char) * 1ch);
+  animation:
+    appear 0s 3s,
+    typing calc(var(--step-2-char) * var(--time-char)) 3s steps(var(--step-2-char), end),
+    blink-caret .5s step-end infinite alternate,
+    deleting calc(var(--step-2-char) * var(--time-char)) 7s steps(var(--step-2-char), end),
+    disapear 0s 9.5s;
+  animation-fill-mode: forwards;
+}
+
+h2.step-3 {
+  position: relative;
+  top: -80px;
+  opacity: 0;
+  width: calc(var(--step-3-char) * 1ch);
+  animation:
+    appear 0s 12s,
+    typing calc(var(--step-3-char) * var(--time-char)) 12s steps(var(--step-3-char), end),
+    blink-caret .5s step-end infinite alternate;
+  animation-fill-mode: forwards;
+}

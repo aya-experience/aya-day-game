@@ -22,6 +22,12 @@
 @keyframes end-caret {
   to { border: none; }
 }
+@keyframes restore-caret {
+  50% {
+    border-right: .1rem solid;
+    border-color: transparent;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -34,6 +40,7 @@ body {
   padding: 50px;
   font-family: "Courier New", Courier, monospace;
   font-weight: 500;
+  color: white;
 }
 
 h2 {
@@ -42,4 +49,10 @@ h2 {
   border-right: .1rem solid black;
   white-space: nowrap;
   overflow: hidden;
+  border-color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
