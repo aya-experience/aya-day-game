@@ -18,17 +18,16 @@
   <script>
     sessionStorage.clear();
 
-    let input = document.getElementById("name");
-    let form = document.getElementById("form");
+    const input = document.getElementById('name');
 
-    input.addEventListener("keydown", (e) => {
+    input.addEventListener('keydown', (e) => {
       if (e.keyCode === 13) {
         let name = input.value;
         if (name === '') {
-          name = 'The nameless one'
+          name = 'The nameless one';
         }
-        sessionStorage.setItem("name", name)
-        window.location.replace('ea8c0a1e.html')
+        sessionStorage.setItem('name', name);
+        window.location.replace('ea8c0a1e.html');
       }
     });
   </script>
