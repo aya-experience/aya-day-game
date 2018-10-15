@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>See U Soon</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/step-6.css">
+</head>
+
+<body>
+  <h2 class="step-1">Sadly, the journey ends here, for the moment...</h2>
+  <h2 class="step-2">Hope to see you soon, I’ll remember you,</h2>
+  <h2 class="step-3" id="name"></h2>
+  <!-- TODO: Fix police for name -->
+
+  <script>
+    const name = document.getElementById("name");
+    name.innerHTML = sessionStorage.getItem("name");
+  </script>
+</body>
+
+</html>

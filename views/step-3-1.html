@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>What's your name?</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/step-3-1.css">
+</head>
+
+<body>
+  <h2 class="step-1">I'm so glad you want to stay with me.</h2>
+  <h2 class="step-2">I forgot to present myself, my name is Aya, and you are?</h2>
+  <h2 class="step-3">
+    > <input id="name" type="text" name="name" autocomplete="off" autofocus>
+  </h2>
+
+  <script>
+    sessionStorage.clear();
+
+    let input = document.getElementById("name");
+    let form = document.getElementById("form");
+
+    input.addEventListener("keydown", (e) => {
+      if (e.keyCode === 13) {
+        let name = input.value;
+        if (name === '') {
+          name = 'The nameless one'
+        }
+        sessionStorage.setItem("name", name)
+        window.location.replace('ea8c0a1e.html')
+      }
+    });
+  </script>
+</body>
+
+</html>
