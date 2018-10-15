@@ -1,16 +1,20 @@
 :root {
   --step-1-char: 12;
-  --step-2-char: 21;
-  --step-3-char: 36;
+  --step-2-char: 16;
+  --step-3-char: 40;
   --step-4-char: 34;
 }
 
 @keyframes color-switch {
-  to { color: white; }
+  to {
+    color: white;
+  }
 }
 
 @keyframes bg-switch {
-  to { background: #FFB5C9; }
+  to {
+    background: #ffb5c9;
+  }
 }
 
 body {
@@ -18,9 +22,7 @@ body {
 }
 
 body.start {
-  animation:
-    color-switch 0s 1s,
-    bg-switch 1s .5s;
+  animation: color-switch 0s 1s, bg-switch 1s 0.5s;
   animation-fill-mode: forwards;
 }
 
@@ -35,15 +37,15 @@ body.start h2 {
 
 h2.step-1 {
   width: calc(var(--step-1-char) * 1ch);
-  animation:
-    typing calc(var(--step-1-char) * var(--time-char)) steps(var(--step-1-char), end),
-    blink-caret .5s step-end infinite alternate;
+  animation: typing calc(var(--step-1-char) * var(--time-char))
+      steps(var(--step-1-char), end),
+    blink-caret 0.5s step-end infinite alternate;
 }
 
 body.start h2.step-1 {
-  animation:
-    deleting calc(var(--step-1-char) * var(--time-char)) steps(var(--step-1-char), end),
-    disapear .2s 1s;
+  animation: deleting calc(var(--step-1-char) * var(--time-char))
+      steps(var(--step-1-char), end),
+    disapear 0.2s 1s;
   animation-fill-mode: forwards;
 }
 
@@ -55,11 +57,12 @@ h2.step-2 {
 
 body.start h2.step-2 {
   width: calc(var(--step-2-char) * 1ch);
-  animation:
-    appear 0s 1s,
-    typing calc(var(--step-2-char) * var(--time-char)) 1s steps(var(--step-2-char), end),
-    blink-caret .5s step-end infinite alternate,
-    deleting calc(var(--step-2-char) * var(--time-char)) 4s steps(var(--step-2-char), end),
+  animation: appear 0s 1s,
+    typing calc(var(--step-2-char) * var(--time-char)) 1s
+      steps(var(--step-2-char), end),
+    blink-caret 0.5s step-end infinite alternate,
+    deleting calc(var(--step-2-char) * var(--time-char)) 4s
+      steps(var(--step-2-char), end),
     disapear 0s 5s;
   animation-fill-mode: forwards;
 }
@@ -72,11 +75,10 @@ h2.step-3 {
 
 body.start h2.step-3 {
   width: calc(var(--step-3-char) * 1ch);
-  animation:
-    appear 0s 5s,
-    typing calc(var(--step-3-char) * var(--time-char)) 5s steps(var(--step-3-char), end),
-    blink-caret .5s step-end infinite alternate,
-    end-caret 0s 7s;
+  animation: appear 0s 5s,
+    typing calc(var(--step-3-char) * var(--time-char)) 5s
+      steps(var(--step-3-char), end),
+    blink-caret 0.5s step-end infinite alternate, end-caret 0s 7s;
   animation-fill-mode: forwards;
 }
 
@@ -88,9 +90,9 @@ h2.step-4 {
 
 body.start h2.step-4 {
   width: calc(var(--step-4-char) * 1ch);
-  animation:
-    appear 0s 8s,
-    typing calc(var(--step-4-char) * var(--time-char)) 8s steps(var(--step-4-char), end),
-    blink-caret .5s step-end infinite alternate;
+  animation: appear 0s 8s,
+    typing calc(var(--step-4-char) * var(--time-char)) 8s
+      steps(var(--step-4-char), end),
+    blink-caret 0.5s step-end infinite alternate;
   animation-fill-mode: forwards;
 }

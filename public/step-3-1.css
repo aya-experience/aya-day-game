@@ -1,30 +1,28 @@
 :root {
   --step-1-char: 37;
-  --step-2-char: 52;
+  --step-2-char: 56;
   --step-3-char: 30;
 }
 
 body {
-  background: linear-gradient(146.61deg, #99E2D6 0%, #86C1DA 100%);
+  background: linear-gradient(146.61deg, #99e2d6 0%, #86c1da 100%);
 }
 
 h2.step-1 {
   width: calc(var(--step-1-char) * 1ch);
-  animation:
-    typing calc(var(--step-1-char) * var(--time-char)) steps(var(--step-1-char), end),
-    blink-caret .5s step-end infinite alternate,
-    end-caret 0s 3s;
+  animation: typing calc(var(--step-1-char) * var(--time-char))
+      steps(var(--step-1-char), end),
+    blink-caret 0.5s step-end infinite alternate, end-caret 0s 3s;
   animation-fill-mode: forwards;
 }
 
 h2.step-2 {
   opacity: 0;
   width: calc(var(--step-2-char) * 1ch);
-  animation:
-    appear 0s 3s,
-    typing calc(var(--step-2-char) * var(--time-char)) 3s steps(var(--step-2-char), end),
-    blink-caret .5s step-end infinite alternate,
-    end-caret 0s 5s;
+  animation: appear 0s 3s,
+    typing calc(var(--step-2-char) * var(--time-char)) 3s
+      steps(var(--step-2-char), end),
+    blink-caret 0.5s step-end infinite alternate, end-caret 0s 5s;
   animation-fill-mode: forwards;
 }
 
