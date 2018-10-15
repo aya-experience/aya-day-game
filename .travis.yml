@@ -8,6 +8,8 @@ cache:
 notifications:
   email: false
 
+before_deploy: "npm run pre-build"
+
 deploy:
   provider: pages
   skip-cleanup: true
