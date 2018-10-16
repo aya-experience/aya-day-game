@@ -5,23 +5,11 @@
   --step-4-char: 34;
 }
 
-@keyframes color-switch {
-  to {
-    color: white;
-  }
-}
-
-@keyframes bg-switch {
-  to {
-    background: #ffb5c9;
-  }
-}
-
 body {
   color: black;
 }
 
-body.start {
+.start {
   animation: color-switch 0s 1s, bg-switch 1s 0.5s;
   animation-fill-mode: forwards;
 }
@@ -31,31 +19,31 @@ h2 {
   border-color: black;
 }
 
-body.start h2 {
+.start h2 {
   border-color: white;
 }
 
-h2.step-1 {
+.step-1 {
   width: calc(var(--step-1-char) * 1ch);
   animation: typing calc(var(--step-1-char) * var(--time-char))
       steps(var(--step-1-char), end),
     blink-caret 0.5s step-end infinite alternate;
 }
 
-body.start h2.step-1 {
+.start .step-1 {
   animation: deleting calc(var(--step-1-char) * var(--time-char))
       steps(var(--step-1-char), end),
     disapear 0.2s 1s;
   animation-fill-mode: forwards;
 }
 
-h2.step-2 {
+.step-2 {
   position: relative;
   top: -100px;
   opacity: 0;
 }
 
-body.start h2.step-2 {
+.start .step-2 {
   width: calc(var(--step-2-char) * 1ch);
   animation: appear 0s 1s,
     typing calc(var(--step-2-char) * var(--time-char)) 1s
@@ -67,13 +55,13 @@ body.start h2.step-2 {
   animation-fill-mode: forwards;
 }
 
-h2.step-3 {
+.step-3 {
   position: relative;
   top: -200px;
   opacity: 0;
 }
 
-body.start h2.step-3 {
+.start .step-3 {
   width: calc(var(--step-3-char) * 1ch);
   animation: appear 0s 5s,
     typing calc(var(--step-3-char) * var(--time-char)) 5s
@@ -82,17 +70,29 @@ body.start h2.step-3 {
   animation-fill-mode: forwards;
 }
 
-h2.step-4 {
+.step-4 {
   position: relative;
   top: -210px;
   opacity: 0;
 }
 
-body.start h2.step-4 {
+.start .step-4 {
   width: calc(var(--step-4-char) * 1ch);
   animation: appear 0s 8s,
     typing calc(var(--step-4-char) * var(--time-char)) 8s
       steps(var(--step-4-char), end),
     blink-caret 0.5s step-end infinite alternate;
   animation-fill-mode: forwards;
+}
+
+@keyframes color-switch {
+  to {
+    color: white;
+  }
+}
+
+@keyframes bg-switch {
+  to {
+    background: #ffb5c9;
+  }
 }

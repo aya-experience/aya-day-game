@@ -6,12 +6,14 @@
     "start": "npm run pre-build && open index.html",
     "pre-build": "./pre-build.sh",
     "post-build": "./post-build.sh",
-    "lint": "eslint --ext .html,.js ."
+    "lint": "eslint --ext .html,.js . && stylelint 'css/*.css' && htmlhint views/*.html"
   },
   "devDependencies": {
     "eslint": "^5.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-html": "^4.0.6",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "htmlhint": "^0.10.1",
+    "stylelint": "^9.6.0"
   }
 }

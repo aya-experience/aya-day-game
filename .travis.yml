@@ -8,7 +8,9 @@ cache:
 notifications:
   email: false
 
-before_deploy: "npm run pre-build"
+before_deploy: 
+  "npm run lint"
+  "npm run pre-build"
 
 deploy:
   provider: pages
