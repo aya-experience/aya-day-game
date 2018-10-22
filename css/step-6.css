@@ -15,7 +15,7 @@ body {
   background-image: linear-gradient(148.35deg, #151515 0%, #5a0a0a 100%);
 }
 
-h2.step-1 {
+.step-1 {
   width: calc(var(--step-1-char) * 1ch);
   animation: typing calc(var(--step-1-char) * var(--time-char))
       steps(var(--step-1-char), end),
@@ -23,7 +23,7 @@ h2.step-1 {
   animation-fill-mode: forwards;
 }
 
-h2.step-2 {
+.step-2 {
   opacity: 0;
   width: calc(var(--step-2-char) * 1ch);
   animation: appear 0s 3s,
@@ -33,7 +33,7 @@ h2.step-2 {
   animation-fill-mode: forwards;
 }
 
-h2.step-3 {
+.step-3 {
   opacity: 0;
   font-family: "Satan";
   font-size: 100px;

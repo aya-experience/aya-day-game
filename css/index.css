@@ -1,30 +1,54 @@
 :root {
-  --time-char: .05s;
+  --time-char: 0.05s;
 }
 
 @keyframes typing {
-  from { width: 0; }
+  from {
+    width: 0;
+  }
 }
+
 @keyframes deleting {
-  to { width: 0; }
+  to {
+    width: 0;
+  }
 }
+
 @keyframes disapear {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
+
 @keyframes appear {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
+
 @keyframes blink-caret {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
+
 @keyframes end-caret {
-  to { border: none; }
+  to {
+    border: none;
+  }
 }
+
 @keyframes restore-caret {
   50% {
-    border-right: .1rem solid;
+    border-right: 0.1rem solid;
     border-color: transparent;
   }
 }
@@ -46,7 +70,7 @@ body {
 h2 {
   font-size: 20px;
   font-weight: 500;
-  border-right: .1rem solid black;
+  border-right: 0.1rem solid black;
   white-space: nowrap;
   overflow: hidden;
   border-color: white;

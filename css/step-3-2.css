@@ -8,7 +8,7 @@ body {
   background: linear-gradient(146.61deg, #99e2d6 0%, #86c1da 100%);
 }
 
-h2.step-1 {
+.step-1 {
   width: calc(var(--step-1-char) * 1ch);
   animation: typing calc(var(--step-1-char) * var(--time-char))
       steps(var(--step-1-char), end),
@@ -19,7 +19,7 @@ h2.step-1 {
   animation-fill-mode: forwards;
 }
 
-h2.step-2 {
+.step-2 {
   position: relative;
   top: -40px;
   opacity: 0;
@@ -31,7 +31,7 @@ h2.step-2 {
   animation-fill-mode: forwards;
 }
 
-h2.step-3 {
+.step-3 {
   position: relative;
   top: -40px;
   opacity: 0;
