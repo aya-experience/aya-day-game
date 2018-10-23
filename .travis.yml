@@ -8,7 +8,7 @@ cache:
 notifications:
   email: false
 
-before_deploy: 
+before_deploy:
   "npm run lint"
   "npm run pre-build"
 
@@ -18,5 +18,6 @@ deploy:
   github-token: $GITHUB_TOKEN
   repo: aya-experience/aya-day-game
   target_branch: gh-pages
+  fqdn: puzzle.aya-experience.com
   on:
     branch: master
