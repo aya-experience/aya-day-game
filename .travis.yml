@@ -9,8 +9,8 @@ notifications:
   email: false
 
 before_deploy:
-  "npm run lint"
-  "npm run pre-build"
+  - "npm run lint"
+  - "npm run pre-build"
 
 deploy:
   provider: pages
