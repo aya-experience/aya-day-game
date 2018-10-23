@@ -1,0 +1,46 @@
+:root {
+  --step-1-char: 37;
+  --step-2-char: 56;
+  --step-3-char: 30;
+}
+
+body {
+  background: linear-gradient(146.61deg, #99e2d6 0%, #86c1da 100%);
+}
+
+.step-1 {
+  width: calc(var(--step-1-char) * 1ch);
+  animation: typing calc(var(--step-1-char) * var(--time-char))
+      steps(var(--step-1-char), end),
+    blink-caret 0.5s step-end infinite alternate, end-caret 0s 3s;
+  animation-fill-mode: forwards;
+}
+
+.step-2 {
+  opacity: 0;
+  width: calc(var(--step-2-char) * 1ch);
+  animation: appear 0s 3s,
+    typing calc(var(--step-2-char) * var(--time-char)) 3s
+      steps(var(--step-2-char), end),
+    blink-caret 0.5s step-end infinite alternate, end-caret 0s 5s;
+  animation-fill-mode: forwards;
+}
+
+.step-3 {
+  opacity: 0;
+  width: calc(var(--step-3-char) * 1ch);
+  animation: appear 0s 5s;
+  animation-fill-mode: forwards;
+  border: none;
+}
+
+.step-3 input {
+  background: none;
+  border: none;
+  width: 100%;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+  color: white;
+  font-size: 20px;
+  outline: none;
+}

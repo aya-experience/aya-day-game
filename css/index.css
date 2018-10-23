@@ -1,0 +1,82 @@
+:root {
+  --time-char: 0.05s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes deleting {
+  to {
+    width: 0;
+  }
+}
+
+@keyframes disapear {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes end-caret {
+  to {
+    border: none;
+  }
+}
+
+@keyframes restore-caret {
+  50% {
+    border-right: 0.1rem solid;
+    border-color: transparent;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: calc(100% - 100px);
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+  padding: 50px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+  color: white;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  border-right: 0.1rem solid black;
+  white-space: nowrap;
+  overflow: hidden;
+  border-color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

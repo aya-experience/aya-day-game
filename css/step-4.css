@@ -1,0 +1,130 @@
+:root {
+  --step-1-char: 42;
+  --step-2-char: 28;
+  --step-3-char: 10;
+  --step-4-char: 67;
+}
+
+body {
+  background: linear-gradient(148.35deg, #c5bbe7 0%, #c8efec 100%);
+}
+
+h2 {
+  width: 67ch;
+  margin: 0;
+}
+
+pre {
+  margin: 0;
+}
+
+.step-0-1,
+.step-0-2,
+.step-0-3 {
+  margin: 10px 0;
+}
+
+.step-0-1 {
+  width: calc(var(--step-1-char) * 1ch);
+  animation: typing calc(var(--step-1-char) * var(--time-char))
+      steps(var(--step-1-char), end),
+    blink-caret 0.5s step-end infinite alternate, end-caret 0s 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.step-0-2 {
+  opacity: 0;
+  width: calc(var(--step-2-char) * 1ch);
+  animation: appear 0s 2.5s,
+    typing calc(var(--step-2-char) * var(--time-char)) 2.5s
+      steps(var(--step-2-char), end),
+    blink-caret 0.5s step-end infinite alternate, end-caret 0s 5s;
+  animation-fill-mode: forwards;
+}
+
+.step-0-3 {
+  opacity: 0;
+  width: calc(var(--step-3-char) * 1ch);
+  animation: appear 0s 5s,
+    typing calc(var(--step-3-char) * var(--time-char)) 5s
+      steps(var(--step-3-char), end),
+    blink-caret 0.5s step-end infinite alternate, end-caret 0s 7s;
+  animation-fill-mode: forwards;
+}
+
+.step-1,
+.step-2,
+.step-3,
+.step-4,
+.step-5,
+.step-6,
+.step-7,
+.step-8,
+.step-9,
+.step-10,
+.step-11,
+.step-12,
+.step-13,
+.step-14 {
+  opacity: 0;
+  width: calc(var(--step-4-char) * 1ch);
+  animation: appear 0s 7s, typing 1s 7s steps(var(--step-1-char), end),
+    blink-caret 0.5s step-end infinite alternate, end-caret 0s 8s;
+  animation-fill-mode: forwards;
+}
+
+.step-1 {
+  animation-delay: 7s, 7s, 0s, 8s;
+}
+
+.step-2 {
+  animation-delay: 8s, 8s, 0s, 9s;
+}
+
+.step-3 {
+  animation-delay: 9s, 9s, 0s, 10s;
+}
+
+.step-4 {
+  animation-delay: 10s, 10s, 0s, 11s;
+}
+
+.step-5 {
+  animation-delay: 11s, 11s, 0s, 12s;
+}
+
+.step-6 {
+  animation-delay: 12s, 12s, 0s, 13s;
+}
+
+.step-7 {
+  animation-delay: 13s, 13s, 0s, 14s;
+}
+
+.step-8 {
+  animation-delay: 14s, 14s, 0s, 15s;
+}
+
+.step-9 {
+  animation-delay: 15s, 15s, 0s, 16s;
+}
+
+.step-10 {
+  animation-delay: 16s, 16s, 0s, 17s;
+}
+
+.step-11 {
+  animation-delay: 17s, 17s, 0s, 18s;
+}
+
+.step-12 {
+  animation-delay: 18s, 18s, 0s, 19s;
+}
+
+.step-13 {
+  animation-delay: 19s, 19s, 0s, 20s;
+}
+
+.step-14 {
+  animation-delay: 20s, 20s, 0s, 21s;
+}

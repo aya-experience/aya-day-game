@@ -1,0 +1,39 @@
+:root {
+  --step-1-char: 61;
+  --step-2-char: 59;
+}
+
+body {
+  background: linear-gradient(148.35deg, #c5e7bb 0%, #c8efec 100%);
+}
+
+.step-1 {
+  width: calc(var(--step-1-char) * 1ch);
+  animation: typing calc(var(--step-1-char) * var(--time-char))
+      steps(var(--step-1-char), end),
+    blink-caret 0.5s step-end infinite alternate, end-caret 0s 3s;
+  animation-fill-mode: forwards;
+}
+
+.step-2 {
+  opacity: 0;
+  width: calc(var(--step-2-char) * 1ch);
+  animation: appear 0s 3s,
+    typing calc(var(--step-2-char) * var(--time-char)) 3s
+      steps(var(--step-2-char), end),
+    blink-caret 0.5s step-end infinite alternate;
+  animation-fill-mode: forwards;
+}
+
+img {
+  opacity: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.show {
+  animation: appear 0.5s;
+  animation-fill-mode: forwards;
+}
